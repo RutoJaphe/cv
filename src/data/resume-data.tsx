@@ -141,8 +141,7 @@ export const RESUME_DATA = {
       link: {
         label: "WeRateDogs",
         href: "https://github.com/RutoJaphe/WeRateDogs_udacity",
-      },
-    },
+      },   },
     
   ],
 } as const;
