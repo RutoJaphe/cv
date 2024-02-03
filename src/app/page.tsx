@@ -87,10 +87,10 @@ export default function Page() {
             </div>
           </div>
 
-          {/* <Avatar className="size-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar> */}
+          {/*<Avatar className="size-28">*/}
+          {/*  <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />*/}
+          {/*  <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>*/}
+          {/*</Avatar>*/}
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -153,7 +153,27 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2 text-xs">{education.degree}</CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+                <Section>
+          <h2 className="text-xl font-bold">Certificates</h2>
+          {RESUME_DATA.certificates.map((certificate) => {
+            return (
+              <Card key={certificate.provider}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="font-semibold leading-none">
+                      {certificate.provider}
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {certificate.start} - {certificate.end}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">{certificate.name}</CardContent>
               </Card>
             );
           })}

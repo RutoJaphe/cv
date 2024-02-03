@@ -60,6 +60,14 @@ export const RESUME_DATA = {
       end: "",
     },
   ],
+    certificates: [
+    {
+      provider: "ALX-Udacity",
+      name: "Data Analyst NanoDegree - (DAND)",
+      start: "Apr 2022",
+      end: "July 2022",
+    },
+  ],
   work: [
     {
       company: "Ideal Ceramics Kenya",
